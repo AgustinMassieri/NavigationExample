@@ -1,0 +1,31 @@
+import React, {useEffect, useState} from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+
+export default function Pantalla1({navigation}) {
+
+    const [value, setValue] = useState("");
+    
+    return (
+    <View style={styles.container}>
+        <Text>-- Screen 1 --</Text>
+        <TextInput style={styles.textInput} placeholder='Ingrese texto a mostrar en la siguiente pantalla' onChangeText={ (valor) => {setValue(valor);} }/>
+        <Button title='Go to the next page' onPress={ () => navigation.navigate('Screen2', {text:value})}/>
+    </View>
+    );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textInput: {
+    borderColor: 'black',
+    borderStyle: 'solid',
+    borderWidth: 2,
+    padding: '2%'
+  }
+});
