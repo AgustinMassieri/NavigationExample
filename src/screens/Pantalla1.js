@@ -3,9 +3,20 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function Pantalla1({navigation}) {
+    return (
+    <View style={styles.container}>
+        <Text>-- Screen 1 --</Text>
+        <Button title='Open Drawer' onPress={ () => navigation.openDrawer()}/>
+        <Button title='Go to the next page' onPress={ () => navigation.navigate('Screen2')}/>
+    </View>
+    );
+}
+
+/*
+export default function Pantalla1({navigation}) {
 
     const [value, setValue] = useState("");
-    
+
     return (
     <View style={styles.container}>
         <Text>-- Screen 1 --</Text>
@@ -13,7 +24,7 @@ export default function Pantalla1({navigation}) {
         <Button title='Go to the next page' onPress={ () => navigation.navigate('Screen2', {text:value})}/>
     </View>
     );
-}
+}*/
 
 const styles = StyleSheet.create({
   container: {

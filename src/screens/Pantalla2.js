@@ -1,6 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
+export default function Pantalla2({navigation}) {
+    
+    return (
+      <View style={styles.container}>
+        <Text>-- Screen 2 --</Text>
+        <Button title='Go Back' onPress={ () => navigation.goBack()}/>
+      </View>
+    );
+  }
+
+/*
 export default function Pantalla2({route, navigation}) {
 
   const valor = route.params;
@@ -12,7 +23,7 @@ export default function Pantalla2({route, navigation}) {
       <Button title='Go Back' onPress={ () => navigation.goBack()}/>
     </View>
   );
-}
+}*/
 
 const styles = StyleSheet.create({
   container: {
