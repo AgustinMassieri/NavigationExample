@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
+//USANDO DRAWER
 export default function Pantalla2({navigation}) {
     
     return (
@@ -11,7 +12,7 @@ export default function Pantalla2({navigation}) {
     );
   }
 
-/*
+/*USANDO NAVIGATION
 export default function Pantalla2({route, navigation}) {
 
   const valor = route.params;

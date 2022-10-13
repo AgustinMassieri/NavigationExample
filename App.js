@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import 'react-native-gesture-handler';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -7,7 +6,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Pantalla1 from './src/screens/Pantalla1';
 import Pantalla2 from './src/screens/Pantalla2';
 
-
+//USANDO DRAWER
 const Drawer = createDrawerNavigator();
 
 export default function App() {
@@ -30,7 +29,8 @@ const styles = StyleSheet.create({
   },
 });
 
-/*const Stack = createNativeStackNavigator();
+/*USANDO NAVIGATION
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
